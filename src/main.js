@@ -53,6 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Active link on scroll
   const sections = document.querySelectorAll('section');
+  // Sticky CTA
+  const stickyCta = document.getElementById('stickyCta');
+  const heroSection = document.getElementById('hero');
+
   window.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(section => {
@@ -69,6 +73,16 @@ document.addEventListener('DOMContentLoaded', () => {
         link.classList.add('active');
       }
     });
+
+    // Show/hide sticky CTA after scrolling past hero
+    if (stickyCta && heroSection) {
+      const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+      if (scrollY > heroBottom) {
+        stickyCta.classList.add('visible');
+      } else {
+        stickyCta.classList.remove('visible');
+      }
+    }
   });
 
   // Reveal Animation on Scroll
