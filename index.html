@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
-  <script type="module" crossorigin src="/assets/index---PEUT6Q.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BClZ0pdY.css">
+  <script type="module" crossorigin src="/zhanna/assets/index-lvmhYO4P.js"></script>
+  <link rel="stylesheet" crossorigin href="/zhanna/assets/index-D0cTeBTr.css">
 </head>
 <body>
   <!-- NAVIGATION -->
@@ -27,6 +27,7 @@
         <span></span><span></span><span></span>
       </button>
     </div>
+    <div class="scroll-progress" id="scrollProgress"></div>
   </header>
 
   <!-- HERO -->
@@ -44,7 +45,7 @@
       </div>
       <div class="hero__image">
         <div class="hero__image-frame">
-          <img src="/portrait.jpg" alt="Психолог Жанна Мартынова" width="480" height="640" />
+          <img src="/zhanna/portrait.jpg" alt="Психолог Жанна Мартынова" width="480" height="640" />
         </div>
         <p class="hero__caption">Ваш психолог — Жанна</p>
       </div>
@@ -131,6 +132,33 @@
     </svg>
   </div>
 
+  <!-- QUIZ HOOK -->
+  <section class="quiz" id="quiz">
+    <div class="container">
+      <h2 class="section-title reveal">Нужна ли вам помощь психолога?</h2>
+      <p class="quiz__subtitle reveal">Ответьте на 5 коротких вопросов — это займёт меньше минуты</p>
+      <div class="quiz__card reveal" id="quizCard">
+        <div class="quiz__progress">
+          <div class="quiz__progress-bar" id="quizProgressBar"></div>
+        </div>
+        <div class="quiz__question" id="quizQuestion">
+          <p class="quiz__step" id="quizStep">Вопрос 1 из 5</p>
+          <h3 id="quizText">Часто ли вы чувствуете тревогу без видимой причины?</h3>
+          <div class="quiz__actions">
+            <button class="btn btn--primary quiz__btn" id="quizYes">Да</button>
+            <button class="btn btn--outline quiz__btn" id="quizNo">Нет</button>
+          </div>
+        </div>
+        <div class="quiz__result" id="quizResult" style="display: none;">
+          <div class="quiz__result-icon">🌿</div>
+          <h3 id="quizResultTitle"></h3>
+          <p id="quizResultText"></p>
+          <a href="#contact" class="btn btn--primary">Записаться на бесплатную встречу</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- HOW IT WORKS -->
   <section class="steps" id="steps">
     <div class="container">
@@ -167,7 +195,7 @@
   <section class="about" id="about">
     <div class="container about__inner">
       <div class="about__image reveal">
-        <img src="/office.jpg" alt="Кабинет психолога" width="640" height="360" />
+        <img src="/zhanna/office.jpg" alt="Кабинет психолога" width="640" height="360" />
       </div>
       <div class="about__content reveal">
         <h2 class="section-title">Обо мне</h2>
@@ -176,7 +204,7 @@
         <p>Для меня важны конфиденциальность, безопасность и уважение к границам клиента. Я создаю пространство, в котором можно быть собой, не бояться осуждения и двигаться в своём темпе.</p>
         <div class="about__values">
           <div class="value-item">
-            <span class="value-item__number">500+</span>
+            <span class="value-item__number" data-count="500" data-suffix="+">0+</span>
             <span class="value-item__label">часов практики</span>
           </div>
           <div class="value-item">
@@ -361,5 +389,9 @@
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4l-4 4V6c0-1.1.9-2 2-2z"/></svg>
     Записаться
   </a>
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="Наверх">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
 </body>
 </html>
